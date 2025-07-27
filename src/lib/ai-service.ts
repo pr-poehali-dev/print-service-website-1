@@ -21,7 +21,7 @@ class AIImageService {
   constructor() {
     // В реальном проекте API ключ должен храниться в переменных окружения
     // Для демо используем публичный доступ (с ограничениями)
-    this.apiKey = process.env.VITE_HF_API_KEY || null;
+    this.apiKey = import.meta.env.VITE_HF_API_KEY || null;
   }
 
   async generateImage(request: AIImageRequest): Promise<AIImageResponse> {
